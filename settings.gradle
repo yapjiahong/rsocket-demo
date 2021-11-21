@@ -1,0 +1,8 @@
+rootProject.name = 'rsocket-demo'
+
+include 'common'
+include 'rdb-service'
+include 'rsocket-service'
+
+include 'demo-rsocket-spring-boot-starter'
+

@@ -1,0 +1,43 @@
+#spring.application.name=com.cloudlytics.rdb-service
+
+server:
+  port: 8081
+
+spring:
+#  application:
+#    name: com.demo.rdb-service
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  datasource:
+    url: jdbc:h2:mem:mydb
+    username: sa
+    password:
+    driverClassName: org.h2.Driver
+  jpa:
+    spring:
+      jpa:
+        database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create
+    defer-datasource-initialization: true
+
+rsocket:
+  brokers: tcp://127.0.0.1:9999
+  jwt-token: my-token
+
+#spring.datasource.url=jdbc:h2:mem:testdb
+#spring.datasource.driverClassName=org.h2.Driver
+#spring.datasource.username=sa
+#spring.datasource.password=
+#
+#
+#spring.jpa.show-sql = true
+#
+#spring.h2.console.enabled = true
+#spring.h2.console.path=/h2-console
+#
+#spring.jpa.hibernate.ddl-auto = create
+#
+#spring.jpa.defer-datasource-initialization=true
